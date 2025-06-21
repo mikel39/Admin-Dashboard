@@ -18,7 +18,7 @@
 }
 body {
   display: grid;
-  grid-template: 1fr 4fr / 1fr 5fr;
+  grid-template: 1fr 6fr / 1fr 5fr;
 }
 nav,
 header,
@@ -59,11 +59,75 @@ nav > ul img {
 nav > ul li {
   margin-top: 6px;
 }
+header,
+main {
+  padding: 30px 40px;
+}
 header {
+  display: grid;
   grid-column: 2 / 3;
-  background-color: beige;
+  grid-row: 1 / 2;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, 60px);
+}
+header > div:first-child form {
+  display: flex;
+  gap: 8px;
+}
+
+header > div:first-child img,
+header > div:nth-child(2) img:first-child {
+  height: 24px;
+}
+header > div:first-child input {
+  border-radius: 10px;
+  width: 90%;
+  background-color: #e2e9f1;
+  border: none;
+  height: 24px;
+}
+header > div:nth-child(2) > img:nth-child(2) {
+  height: 25px;
+  border-radius: 50%;
+}
+header > div {
+  font-weight: bold;
+}
+header > div:nth-child(2) {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 10px;
+}
+header > div:nth-child(3) {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  column-gap: 30px;
+}
+header > div:nth-child(3) img {
+  height: 50px;
+  border-radius: 50%;
+  grid-row: 1 / 3;
+}
+header > div:last-child {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
+}
+header button {
+  background-color: #1892d5;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 16px;
+  color: white;
+  font-weight: bold;
 }
 main {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  background-color: #e2e9f1;
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 3fr 3fr 2fr;
 }
